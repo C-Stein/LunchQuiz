@@ -1,0 +1,7 @@
+c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\obj\Debug\LunchQuizTests.csprojResolveAssemblyReference.cache
+c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\bin\Debug\LunchQuizTests.dll
+c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\bin\Debug\LunchQuizTests.pdb
+c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\bin\Debug\LunchQuiz.exe
+c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\bin\Debug\LunchQuiz.pdb
+c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\obj\Debug\LunchQuizTests.dll
+c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\obj\Debug\LunchQuizTests.pdb
