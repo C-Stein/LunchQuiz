@@ -9,41 +9,35 @@ namespace LunchQuizTests
     public class FastFoodTests
     {
         [TestMethod]
-        public void EnsureICanCreateInstance()
+        public void FastFoodEnsureICanCreateInstance()
         {
             FastFood krustys = new FastFood();
             Assert.IsNotNull(krustys);
         }
-
         [TestMethod]
-        public void EnsureICanCreateMenuItem()
-        {
-            MenuItem milkshake = new MenuItem();
-            Assert.IsNotNull(milkshake);
-        }
-
-        //[TestMethod]
-        //public void FastFoodHasMenuItems()
-        //{
-        //    FastFood krustys = new FastFood();
-           
-        //    krustys.addMenuItem("soylentGreen");
-        //    Assert.IsNotNull(krustys.MenuItems);
-        //}
-
-        [TestMethod]
-        public void tryLists()
-        {
-            List<string> menuThing = new List<string>();
-            Assert.IsNotNull(menuThing);
-        }
-
-        [TestMethod]
-        public void CanAddMenuItemWithJustName()
+        public void FastFoodCanSetDriveThrough()
         {
             FastFood krustys = new FastFood();
-            krustys.addMenuItem("hamburger");
-            //Assert.AreEqual(1, krustys.MenuItems.Count);
+            krustys.HasDriveThrough = true;
+            Assert.IsTrue(krustys.HasDriveThrough);
+        }
+
+        [TestMethod]
+        public void FastFoodCanAddMenuItemWithJustName()
+        {
+            FastFood krustys = new FastFood();
+            int BeginningNumberOfMenuItems = krustys.MenuItems.Count;
+            krustys.addMenuItem("Chicken Nuggets");
+            Assert.AreEqual(BeginningNumberOfMenuItems + 1, krustys.MenuItems.Count);
+        }
+
+        [TestMethod]
+        public void FastFoodCanAddMenuItemWithNameAndPrice()
+        {
+            FastFood krustys = new FastFood();
+            int BeginningNumberOfMenuItems = krustys.MenuItems.Count;
+            krustys.addMenuItem("Chicken Nuggets", 4.00);
+            Assert.AreEqual(BeginningNumberOfMenuItems + 1, krustys.MenuItems.Count);
         }
     }
 }

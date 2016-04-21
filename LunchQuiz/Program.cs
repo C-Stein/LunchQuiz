@@ -11,13 +11,21 @@ namespace LunchQuiz
         static void Main(string[] args)
         {
             FastFood krustys = new FastFood();
-            krustys.addMenuItem("Burger");
-            foreach (string item in krustys.MenuItems)
+            Console.WriteLine("Fast Food Menu:");
+            foreach (MenuItem item in krustys.MenuItems)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.Name);
             }
             Console.ReadKey();
-            
+
+            Casual tchotchkys = new Casual();
+            Console.WriteLine("Casual Menu:");
+            foreach (MenuItem item in tchotchkys.MenuItems)
+            {
+                Console.WriteLine(item.Name);
+            }
+            Console.ReadKey();
+
         }
     }
 }

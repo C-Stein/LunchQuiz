@@ -18,7 +18,6 @@ namespace LunchQuizTests
         public void RestaurantHasMenuItems()
         {
             Restaurant joes = new Restaurant();
-            joes.MenuItems.Add("stuff");
             Assert.IsNotNull(joes.MenuItems);
             
         }
@@ -26,22 +25,22 @@ namespace LunchQuizTests
         public void RestaurantCanSetNumberOf4Tops()
         {
             Restaurant joes = new Restaurant();
-            joes.NumOf4Tops = 8;
-            Assert.AreEqual(8, joes.NumOf4Tops);
+            joes.Numberof4PersonTables = 8;
+            Assert.AreEqual(8, joes.Numberof4PersonTables);
         }
         [TestMethod]
         public void RestaurantCanSetNumberOf2Tops()
         {
             Restaurant joes = new Restaurant();
-            joes.NumOf2Tops = 6;
-            Assert.AreEqual(6, joes.NumOf2Tops);
+            joes.Numberof2PersonTables = 6;
+            Assert.AreEqual(6, joes.Numberof2PersonTables);
         }
         [TestMethod]
         public void RestaurantCanCalculateCapacity()
         {
             Restaurant joes = new Restaurant();
-            joes.NumOf4Tops = 8;
-            joes.NumOf2Tops = 6;
+            joes.Numberof4PersonTables = 8;
+            joes.Numberof2PersonTables = 6;
             Assert.AreEqual(44, joes.capacity());
         }
     }

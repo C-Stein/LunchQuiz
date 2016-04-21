@@ -52,6 +52,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CasualTests.cs" />
+    <Compile Include="FineDiningTests.cs" />
+    <Compile Include="MenuItemTests.cs" />
     <Compile Include="RestaurantTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FastFoodTests.cs" />
