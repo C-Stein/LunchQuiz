@@ -26,6 +26,14 @@ namespace LunchQuiz
             }
             Console.ReadKey();
 
+            Console.WriteLine(tchotchkys.MenuItems.Exists(x => x.Name == "French Fries"));
+
+            Console.ReadKey();
         }
+
+        }
+
+
+
     }
-}
+    

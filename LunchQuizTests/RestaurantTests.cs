@@ -22,6 +22,25 @@ namespace LunchQuizTests
             
         }
         [TestMethod]
+        public void RestaurantMenuItemsAreCorrectType()
+        {
+            Restaurant joes = new Restaurant();
+            Assert.IsInstanceOfType(joes.MenuItems, typeof(List<MenuItem>));
+        }
+        [TestMethod]
+        public void RestaurantHasCurrentCustomers()
+        {
+            Restaurant joes = new Restaurant();
+            Assert.IsNotNull(joes.CurrentCustomers);
+
+        }
+        [TestMethod]
+        public void RestaurantCurrentCustomersAreCorrectType()
+        {
+            Restaurant joes = new Restaurant();
+            Assert.IsInstanceOfType(joes.CurrentCustomers, typeof(List<Customer>));
+        }
+        [TestMethod]
         public void RestaurantCanSetNumberOf4Tops()
         {
             Restaurant joes = new Restaurant();
@@ -43,5 +62,22 @@ namespace LunchQuizTests
             joes.Numberof2PersonTables = 6;
             Assert.AreEqual(44, joes.capacity());
         }
+        [TestMethod]
+        public void RestaurantCanAddToCurrentCustomer()
+        {
+            Restaurant joes = new Restaurant();
+            Customer Steve = new Customer();
+            joes.CurrentCustomers.Add(Steve);
+            CollectionAssert.Contains(joes.CurrentCustomers, Steve);
+        }
+        [TestMethod]
+        public void RestaurantCanAddToCurrentCustomerAnotherWay()
+        {
+            Restaurant joes = new Restaurant();
+            Customer Steve = new Customer();
+            joes.AddCustomerToList(Steve);
+            CollectionAssert.Contains(joes.CurrentCustomers, Steve);
+        }
+       
     }
 }

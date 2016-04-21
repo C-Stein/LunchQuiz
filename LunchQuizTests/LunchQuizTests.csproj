@@ -58,6 +58,7 @@
     <Compile Include="RestaurantTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FastFoodTests.cs" />
+    <Compile Include="OrderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LunchQuiz\LunchQuiz.csproj">
