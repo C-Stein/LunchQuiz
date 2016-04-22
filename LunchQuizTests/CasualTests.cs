@@ -23,6 +23,7 @@ namespace LunchQuizTests
         }
         [TestMethod]
         public void CasualRestaurantsAreCreatedWithSomethingAlreadyOnTheMenu()
+            //you will need to write a constructor function
         {
             Casual tchotchkes = new Casual();
             Assert.IsTrue(tchotchkes.MenuItems.Count > 0);

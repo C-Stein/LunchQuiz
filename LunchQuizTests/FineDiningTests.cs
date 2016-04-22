@@ -22,6 +22,7 @@ namespace LunchQuizTests
         }
         [TestMethod]
         public void FineDiningCanCalculateCapacity()
+        //expand upon base.capacity()
         {
             FineDining fancys = new FineDining();
             fancys.NumberofSeatsAtBar = 12;

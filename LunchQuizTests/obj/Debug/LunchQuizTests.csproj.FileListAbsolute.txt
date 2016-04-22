@@ -5,3 +5,4 @@ c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\
 c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\bin\Debug\LunchQuiz.pdb
 c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\obj\Debug\LunchQuizTests.dll
 c:\users\caitlin\documents\visual studio 2015\Projects\LunchQuiz\LunchQuizTests\obj\Debug\LunchQuizTests.pdb
+C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\LunchQuiz\LunchQuizTests\bin\Debug\RecommendedOrder.orderedtest

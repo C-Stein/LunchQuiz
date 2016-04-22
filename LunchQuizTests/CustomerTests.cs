@@ -57,15 +57,14 @@ namespace LunchQuizTests
             joes.MenuItems.Add(lasagna);
             joes.MenuItems.Add(milkshake);
 
-            //The object initializer syntax used for bobsOrder is a shortcut used to set properties on an object when creating it
             Order bobsOrder = new Order
             {
                 Drink = "coke",
                 Entree = "lasagna",
                 //Dessert = "milkshake"
             };
-            Assert.IsFalse(bobsOrder.VerifyOrderComplete());
-            Assert.IsFalse(Bob.ReadyToPlaceOrder(bobsOrder, joes));
+            Assert.IsFalse(bobsOrder.VerifyOrderComplete()); //False!
+            Assert.IsFalse(Bob.ReadyToPlaceOrder(bobsOrder, joes)); //Also false!
         }
 
         [TestMethod]

@@ -26,7 +26,7 @@ namespace LunchQuizTests
             Assert.AreEqual("milkshake", myOrder.Dessert);
         }
         [TestMethod]
-        public void IfYouDontSetThePropertiesTheyAreNull()
+        public void OrderIfYouDontSetThePropertiesTheyAreNull()
             //This is pretty much default, once  you declare the properties, this test should pass without any other code being written
         {
             Order myOrder = new Order();

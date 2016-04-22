@@ -16,6 +16,7 @@ namespace LunchQuizTests
 
         [TestMethod]
         public void RestaurantHasMenuItems()
+            //try to pass this test and the one below it at the same time
         {
             Restaurant joes = new Restaurant();
             Assert.IsNotNull(joes.MenuItems);
@@ -29,6 +30,7 @@ namespace LunchQuizTests
         }
         [TestMethod]
         public void RestaurantHasCurrentCustomers()
+        //try to pass this test and the one below it at the same time
         {
             Restaurant joes = new Restaurant();
             Assert.IsNotNull(joes.CurrentCustomers);
@@ -39,6 +41,23 @@ namespace LunchQuizTests
         {
             Restaurant joes = new Restaurant();
             Assert.IsInstanceOfType(joes.CurrentCustomers, typeof(List<Customer>));
+        }
+        [TestMethod]
+        public void RestaurantCanAddToCurrentCustomer()
+        {
+            Restaurant joes = new Restaurant();
+            Customer Steve = new Customer();
+            joes.CurrentCustomers.Add(Steve);
+            CollectionAssert.Contains(joes.CurrentCustomers, Steve);
+        }
+
+        [TestMethod]
+        public void RestaurantCanAddToCurrentCustomerAnotherWay()
+        {
+            Restaurant joes = new Restaurant();
+            Customer Steve = new Customer();
+            joes.AddCustomerToList(Steve);
+            CollectionAssert.Contains(joes.CurrentCustomers, Steve);
         }
         [TestMethod]
         public void RestaurantCanSetNumberOf4Tops()
@@ -61,22 +80,6 @@ namespace LunchQuizTests
             joes.Numberof4PersonTables = 8;
             joes.Numberof2PersonTables = 6;
             Assert.AreEqual(44, joes.capacity());
-        }
-        [TestMethod]
-        public void RestaurantCanAddToCurrentCustomer()
-        {
-            Restaurant joes = new Restaurant();
-            Customer Steve = new Customer();
-            joes.CurrentCustomers.Add(Steve);
-            CollectionAssert.Contains(joes.CurrentCustomers, Steve);
-        }
-        [TestMethod]
-        public void RestaurantCanAddToCurrentCustomerAnotherWay()
-        {
-            Restaurant joes = new Restaurant();
-            Customer Steve = new Customer();
-            joes.AddCustomerToList(Steve);
-            CollectionAssert.Contains(joes.CurrentCustomers, Steve);
         }
 
         [TestMethod]
