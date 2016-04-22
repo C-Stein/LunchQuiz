@@ -62,12 +62,6 @@
     <Compile Include="OrderTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LunchQuiz\LunchQuiz.csproj">
-      <Project>{90925544-0c26-464d-9ec9-84548f705b5d}</Project>
-      <Name>LunchQuiz</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="RecommendedOrder.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

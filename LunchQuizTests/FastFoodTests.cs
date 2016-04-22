@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using LunchQuiz;
 using System.Collections.Generic;
 
 namespace LunchQuizTests
