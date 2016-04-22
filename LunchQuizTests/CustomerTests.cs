@@ -94,5 +94,32 @@ namespace LunchQuizTests
             Assert.IsFalse(Bob.ReadyToPlaceOrder(bobsOrder, joes));
         }
 
+        [TestMethod]
+        public void CustomerIsReadyToOrderFromAllTypesOfRestaurants()
+        {
+            Customer Bob = new Customer();
+            FastFood krustys = new FastFood(); //Uncomment this line after noticing what is different
+            MenuItem coke = new MenuItem();
+            coke.Name = "coke";
+            MenuItem lasagna = new MenuItem();
+            lasagna.Name = "lasagna";
+            MenuItem milkshake = new MenuItem();
+            milkshake.Name = "milkshake";
+
+            krustys.MenuItems.Add(coke);
+            krustys.MenuItems.Add(lasagna);
+            krustys.MenuItems.Add(milkshake);
+
+            //The object initializer syntax used for bobsOrder is a shortcut used to set properties on an object when creating it
+            Order bobsOrder = new Order
+            {
+                Drink = "coke",
+                Entree = "lasagna",
+                Dessert = "milkshake"
+            };
+            Assert.IsTrue(bobsOrder.VerifyOrderComplete());
+            Assert.IsTrue(Bob.ReadyToPlaceOrder(bobsOrder, krustys));
+        }
+
     }
 }

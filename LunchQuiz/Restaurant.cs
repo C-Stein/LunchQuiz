@@ -30,12 +30,22 @@ namespace LunchQuiz
         {
             return (Numberof4PersonTables * 4) + (Numberof2PersonTables * 2);
         }
-        // list of customers w. ability to add to list
+
         public void AddCustomerToList(Customer newCustomer)
         {
             CurrentCustomers.Add(newCustomer);
 
         }
-       
+
+        public bool ItemIsOnMenu (string nameOfItem)
+        {
+            return MenuItems.Exists(x => x.Name == nameOfItem);
+        }
+
+        public bool ItemIsOnMenu(MenuItem nameOfItem)
+        {
+            return MenuItems.Exists(x => x.Name == nameOfItem.Name);
+        }
+
     }
 }

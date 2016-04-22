@@ -78,6 +78,27 @@ namespace LunchQuizTests
             joes.AddCustomerToList(Steve);
             CollectionAssert.Contains(joes.CurrentCustomers, Steve);
         }
-       
+
+        [TestMethod]
+        public void RestaurantCanCheckIfAnItemIsOnMenuWhenGivenString()
+        //HINT: https://msdn.microsoft.com/en-us/library/bfed8bca(v=vs.110).aspx
+        {
+            Restaurant joes = new Restaurant();
+            MenuItem flavorsOfFried = new MenuItem();
+            flavorsOfFried.Name = "Sampler Platter";
+            joes.MenuItems.Add(flavorsOfFried);
+            Assert.IsTrue(joes.ItemIsOnMenu("Sampler Platter"));        
+        }
+
+        [TestMethod]
+        public void RestaurantCanCheckIfAnItemIsOnMenuWhenGivenAMenuItem()
+        {
+            Restaurant joes = new Restaurant();
+            MenuItem flavorsOfFried = new MenuItem();
+            flavorsOfFried.Name = "Sampler Platter";
+            joes.MenuItems.Add(flavorsOfFried);
+            Assert.IsTrue(joes.ItemIsOnMenu(flavorsOfFried));
+        }
+
     }
 }
