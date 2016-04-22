@@ -27,6 +27,7 @@ namespace LunchQuizTests
         }
         [TestMethod]
         public void IfYouDontSetThePropertiesTheyAreNull()
+            //This is pretty much default, once  you declare the properties, this test should pass without any other code being written
         {
             Order myOrder = new Order();
             Assert.IsNull(myOrder.Drink);

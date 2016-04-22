@@ -53,6 +53,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CasualTests.cs" />
+    <Compile Include="CustomerTests.cs" />
     <Compile Include="FineDiningTests.cs" />
     <Compile Include="MenuItemTests.cs" />
     <Compile Include="RestaurantTests.cs" />
